@@ -18,7 +18,7 @@
 					<img src="images/logo.png" alt="logo" width="125px">
 				</div>
 				<nav>
-					<ul>
+					<ul id="menuItems">
 						<li><a href="">Home</a></li>
 						<li><a href="">Products</a></li>
 						<li><a href="">About</a></li>
@@ -27,6 +27,8 @@
 					</ul>
 				</nav>
 				<img src="images/cart.png" alt="cart" width="30px" height="30px">
+				<img src="images/menu.png" alt="menu" class="menu-icon"
+				onclick="menuToggle()">
 			</div>
 			<div class="row">
 				<div class="col-2">
@@ -337,5 +339,18 @@
 			<p class="copyright">Copyright 2023 - Easy Tutorials</p>
 		</div>
 	</div>
+
+	<script>
+		let menuItems = document.getElementById('menuItems');
+		menuItems.style.maxHeight = '0px';
+
+		function menuToggle() {
+			if (menuItems.style.maxHeight == '0px') {
+				menuItems.style.maxHeight = '200px';
+			} else {
+				menuItems.style.maxHeight = '0px';
+			}
+		}
+	</script>
 </body>
 </html>
